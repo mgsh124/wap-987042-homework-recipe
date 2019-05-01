@@ -5,6 +5,9 @@ body {
     width: 1024px;
     margin: 0 auto;
     line-height: 1.5;
+}
+
+.background {
     background-image: url("../images/silverware.jpg");
 }
 
@@ -18,9 +21,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .main-title {
-    text-align: center;
+    margin: 20px auto;
     font-size: 22pt;
-    width: auto;
 }
 
 .title {
@@ -53,9 +55,36 @@ blockquote .author {
 
 .copyright {
     font-family: monospace;
-    width: 270px;
-    text-align: right;
     margin: 20px 0;
+}
+
+.copyright::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.copyright .inner {
+    float: right;
+}
+
+.copyright .inner .clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.copyright .inner .clearfix div:first-child {
+    float: left;
+}
+
+.copyright .inner .clearfix div:last-child {
+    float: right;
+    margin-left: 15px;
+}
+
+.validator {
+    text-align: right;
 }
 
 .validator a {
